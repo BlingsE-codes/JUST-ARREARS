@@ -1,0 +1,196 @@
+
+
+h1{
+    color: rgb(51, 48, 219);
+    font-size: 25px;
+    display: inline-flexbox;
+    text-align: center;
+}
+
+#input{
+    font-size: 40px;
+    margin: 15px;
+    text-align: left;
+    border: 2px solid;
+    padding-left: 15px;
+    background-color: rgb(192, 182, 182);
+    pointer-events: all;
+}
+button{
+    background-color: hsl(129, 45%, 28%);
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+}
+button:hover{
+    background-color: hsl(129, 47%, 60%);
+}
+
+.inputs{
+    width: 170px;
+    height: 24px;
+    background-color: hsl(60, 4%, 58%);
+    border-radius: 5px;
+    border: 2px solid hsl(120, 100%, 25%);
+    padding-top: 5px;
+    padding-bottom: 5px ;
+    margin-top: 5px;
+    
+}
+.inputs:hover{
+    background-color:hsl(60, 4%, 68%); 
+    border: 4px solid hsl(120, 100%, 35%);
+}
+
+body{
+    background-color: whitesmoke;
+    margin: 0px;
+    display: inline;
+    max-width: 500vw;
+    max-height: 100vh;
+    height: 100vh;
+    white-space: nowrap;
+    overflow:auto;
+    
+}
+
+
+h4{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#outputhole{
+    padding-bottom: 256px;
+}
+
+#percentlabel{
+    font-size: 15px;
+    padding-top: 10px;
+    color: rgb(236, 243, 235);
+}
+
+.percent{
+    background-color: hsl(207, 12%, 72%);
+    border: 3px solid hsl(9, 93%, 37%);
+    width: 35px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+.percent:hover{
+    
+    background-color: hsl(207, 12%, 62%);
+    border: 3px solid hsl(9, 93%, 47%);
+}
+
+.percentlabel1{
+    font-size: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.alldisplay{
+    font-size: 20px;
+    color: rgb(48, 134, 8);
+    margin-top: 15px;
+    margin-bottom: 1px;
+    padding: 5px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 5px;
+    box-shadow: 3px 4px 1px rgb(62, 70, 52);
+    border: 4px solid rgb(81, 164, 202);
+    
+}
+    
+
+
+.form{
+    max-width: 450px;
+    max-height: 800vh;
+    background-color: rgb(209, 223, 235);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(70, 71, 71, 0.76);
+    box-sizing: border-box;
+    overflow:visible;
+}
+
+#exp{
+    font-size: 12px;
+    color: rgb(16, 17, 17);
+    margin-right:5px;
+}
+
+#totalDisplay{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(248, 73, 73);
+    width: 100%;
+    height: 100px;
+    background-color: rgb(178, 192, 192);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 5rem;
+}
+
+#outputbtn{
+    padding: 10px;
+}
+#image{
+    border: 2px solid rgb(81, 164, 202);
+    box-shadow: 2px 1px 1px rgb(214, 240, 180);
+    border-radius: 5px;
+    margin-right: 7px;
+}
+
+#image:hover{
+    box-shadow: 2px 1px 1px rgb(70, 77, 61);
+    border-radius: 5px;
+    margin-right: 7px;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+#image2{
+    border: 2px solid rgb(20, 205, 230);
+    box-shadow: 2px 3px 1px rgb(34, 36, 32);
+    border-radius: 5px;
+    margin-right: 7px;
+}
+#image2:hover{
+        border: 2px solid rgb(20, 205, 230);
+        box-shadow: 2px 3px 1px rgb(34, 36, 32);
+        border-radius: 5px;
+        margin-right: 7px;  
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+}
+#print{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: hsl(0, 0%, 50%);
+margin-top: 20px;
+}
+#print:hover{
+    background-color: hsl(0, 0%, 70%);
+
+}
+#copywrite{
+    font-size: 12px;
+    margin-right: 250px;
+    
+}#copywrite1{
+    font-size: 12px;
+    margin-right: 200px;
+
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="arrearscalculation2.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ports Arrearscalculator</title>
+</head>
+        
+<body>
+  <div class="form">
+  <a href="https://www.gnet.grimaldi-eservice.com/gnet/Pages_RoroTracking/WFRoroTracking">  
+    <img src="Arrears cal.jpg" id="image" width="200px" height="100px">
+  </a>
+  <a href="https://login.humanmanager.net">
+    <img src="humanmanager.PNG" id="image2" width="120px" height="60">
+  </a>
+ 
+
+   
+    <div id="hole3">
+    <div><h1> ARREARS CALCULATOR</h1></div>
+  
+      <div id="input3">
+          <label id="percentlabel1" class="percentlabel1">Percentage Added :</label>
+          <input type="number" class="percent" id="percent" min ="0"><br>
+          <label id="month" class="percentlabel1">Number of Months : </label>
+          <input type="number" class="percent" id="monthlabel1" min="0"><br>
+  
+          <label id="exp">Enter Your Basic:</label>
+          <input type="number" id="basicInput" class="inputs">
+          <button type="button" onclick="calBasic()">CLR</button><br>
+
+          <label id="exp">Enter Your OverT:</label>
+          <input type="number" id="overTimeInput" class="inputs">
+          <button id="overtimebtn" onclick="overtime1()">CLR</button><br>
+          <div id="basicDisplay" class="alldisplay"></div><br>
+          
+  
+          <label id="transbtn" onclick="calTransport()"></label><br>
+          <div id="transDisplay" class="alldisplay"></div><br>
+  
+          <label id="housebtn" onclick="calHousing()"></label><br>
+          <div id="houseDisplay" class="alldisplay"></div><br>
+  
+   
+          <label id="mealbtn" onclick="calmeal()"></label><br>
+          <div id="mealDisplay" class="alldisplay"></div><br>
+
+          <div id="overtimeDisplay" class="alldisplay"></div><br>
+
+  
+          <br>
+          <label><h4>Have You used your annual leave?</h4></label>
+          <input type="radio" id="leaveradio1" value=""name="radiolabel"><label >Yes</label><br>
+          <input type="radio" id="leaveradio2" value=""name="radiolabel"><label name="radiolabel"> No</label><br><br>
+  
+         
+          <label id="leavebtn" onclick="calleave()"></label><br>
+          <div id="leaveDisplay" class="alldisplay"></div>
+  
+  
+         <div id="outputhole">
+          <div id="totalDisplay"></div><br><label id="month" class="percentlabel1">Tax % : </label>
+          <input type="number" class="percent" id="taxlabel" min="0">
+          <button id="outputbtn" onclick="calculate()" >Calculate</button><br>
+          <div>
+            <button id="print">PRINT</button>
+            <p id="copywrite">&#169 Eziefula Charles 2025</p>
+            <a href="https://gmail.com">
+              <p id="copywrite1">📩 Email: charlichal2@gmail.com</p>
+            </a>
+              </div>
+             
+         </div>
+        
+          
+  
+      </div>
+    </div>
+ 
+  </div>
+ 
+    <script src="arr2.js"></script>
+</body>
+</html>
