@@ -120,7 +120,7 @@ function calculate(){
         newLeave = (newBasic * 12) * 0.21;
         oldLeave = (oldBasic * 12) * 0.21;
         diffInLeave = newLeave - oldLeave;
-        leaveDisplay.textContent = `New Leave allowance: ₦${newLeave.toFixed(2,0)}`;
+        leaveDisplay.textContent = `Leave allowance: ₦${newLeave.toFixed(2,0)}`;
     }
     
     if (percent == "" || months == "" || basicInput == "" || oldOvertimeinput == "") {
