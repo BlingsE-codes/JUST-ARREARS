@@ -128,7 +128,7 @@ function calculate(){
      
      } 
          if (months == 0) {
-             totalDisplay.textContent = `Months can't be Zero`;
+             totalDisplay.textContent = `Fill in the boxes`;
     }
 
          else if (percent == 0) {
