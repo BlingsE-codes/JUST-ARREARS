@@ -123,24 +123,7 @@ function calculate(){
         leaveDisplay.textContent = `Leave allowance: ₦${newLeave.toFixed(2,0)}`;
     }
     
-    if (percent == "" || months == "" || basicInput == "" || oldOvertimeinput == "") {
-        totalDisplay.textContent = `Please, fill the boxes above`;
-     
-     } 
-         if (months == 0) {
-             totalDisplay.textContent = `Fill in the boxes`;
-    }
-
-         else if (percent == 0) {
-            totalDisplay.textContent = `Percent can't be Zero`;
-    }
-
-         else if (basicInput == 0) {
-            totalDisplay.textContent = `Basic can't be Zero`;
-    }
-     
-     
-     if (radioYes.checked == true){
+     if (radioYes.checked == true && radioNo.checked == false){
         sum = (diffInbasic * months) + (diffIntransport * months) + (diffInhousing * 11) + 
         (diffInMeal * months) + diffInLeave + diffInOvertime;
         taxcal = (taxlabel * 0.01) * sum;
@@ -152,7 +135,7 @@ function calculate(){
 
         totalDisplay.textContent = (`Total Arrears: ₦${((totalSum).toFixed(2,0))}`);    
      }
-     else if(radioNo.checked == true){
+     else if(radioNo.checked == true && radioYes.checked == false){
         sum1 = (diffInbasic * months) + (diffIntransport * months) + (diffInhousing * 11) +
         (diffInOvertime) + (diffInMeal * months);
         taxcal = (taxlabel * 0.01) * sum1;
@@ -163,6 +146,23 @@ function calculate(){
 
         totalDisplay.textContent = (`Total Arrears: ₦${((totalSum).toFixed(2,0))}`);    
 
+     }
+
+     else if(radioNo.checked == false && radioYes == false){
+        totalDisplay.textContent = `select your Leave status`
+     }
+
+   
+   else{
+        totalDisplay.textContent = `Fill boxes & tick your Leave status`;
+        basicDisplay.textContent = ``
+        leaveDisplay.textContent = ""
+        mealDisplay.textContent = ""
+        transDisplay.textContent = ``
+        overtimeDisplay.textContent = ""
+        housingDisplay.textContent = ""
+       
+      
      }
     
  } 
