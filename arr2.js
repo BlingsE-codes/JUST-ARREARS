@@ -2,9 +2,14 @@ let radioYes = document.getElementById(`leaveradio1`);
 let radioNo = document.getElementById(`leaveradio2`);
 let basicInput = document.getElementById(`basicInput`).value;
 let housingDisplay = document.getElementById(`houseDisplay`);
+let upfrontDisplay = document.getElementById(`upfrontDisplay`);
+basicInput = Number(basicInput);
+let oldOvertimeinput;
+oldOvertimeinput = Number(oldOvertimeinput);
 let newtransport;
 let diffIntransport;
 let oldTransport;
+oldTransport = Number(oldTransport);
 let newLeave;
 let oldLeave;
 let diffInLeave;
@@ -25,11 +30,8 @@ let sum1;
 let totalSum;
 let percent1;
 let totalSum2;
-let totalSum4;  
-
-
-
-
+let totalSum4;
+let basicInput1;
 
 
 
@@ -42,7 +44,6 @@ function calculate(){
     let totalDisplay = document.getElementById(`totalDisplay`);
     let taxlabel = document.getElementById(`taxlabel`).value;
     let percent = document.getElementById(`percent`).value;
-    let oldOvertimeinput = document.getElementById(`overTimeInput`).value;
     let pensiondiff = totalSum * 0.008
     pensiondiff = Number(pensiondiff);
     let numofpension = pensiondiff * months
@@ -53,17 +54,18 @@ function calculate(){
     let wt = overtime1()
     let x = calmeal()
     let xx = calleave()
+    let tt = upfront()
+    
+    
 
   
     
-     
     
     function calBasic(){
             
         let percent = document.getElementById(`percent`).value;
         let basicInput = document.getElementById(`basicInput`).value;
         let basicDisplay = document.getElementById(`basicDisplay`);
-        
         diffInbasic = basicInput * percent / 100;
         let a = basicInput;
         let b = diffInbasic
@@ -86,7 +88,7 @@ function calculate(){
     }
     
     function calHousing(){
-        let housingDisplay = document.getElementById(`houseDisplay`)
+        let housingDisplay = document.getElementById(`houseDisplay`);
         newhousing = newBasic * 0.7;
         oldHousing = oldBasic * 0.7;
         diffInhousing = newhousing - oldHousing;
@@ -97,6 +99,7 @@ function calculate(){
     function overtime1(){
         let percent = document.getElementById(`percent`).value;
         let overtimeDisplay = document.getElementById(`overtimeDisplay`);
+        let oldOvertimeinput = document.getElementById(`overTimeInput`).value;
         percent1 = percent / 100;
         diffInOvertime = oldOvertimeinput * percent1;
         let c = oldOvertimeinput;
@@ -121,9 +124,19 @@ function calculate(){
         newLeave = (newBasic * 12) * 0.21;
         oldLeave = (oldBasic * 12) * 0.21;
         diffInLeave = newLeave - oldLeave;
-        leaveDisplay.textContent = `Leave allowance: ₦${newLeave.toFixed(2,0)}`;
+        leaveDisplay.textContent = `New Leave allowance: ₦${newLeave.toFixed(2,0)}`;
     }
-    
+
+    function upfront(){
+        totalup = (newhousing * 12) + 240000;
+        totalup = parseInt(totalup);
+        upfrontDisplay.textContent =  (`Your next Up-front: ₦${((totalup).toFixed(2,0))}`) ;
+         
+    }
+       
+
+   
+     
      if (radioYes.checked == true && radioNo.checked == false){
         sum = (diffInbasic * months) + (diffIntransport * months) + (diffInhousing * 11) + 
         (diffInMeal * months) + diffInLeave + diffInOvertime;
@@ -146,15 +159,14 @@ function calculate(){
         totalSum = totalSum - curpfa
 
         totalDisplay.textContent = (`Total Arrears: ₦${((totalSum).toFixed(2,0))}`);    
-
+        
      }
 
      else if(radioNo.checked == false && radioYes == false){
         totalDisplay.textContent = `select your Leave status`
      }
 
-   
-   else{
+     else{
         totalDisplay.textContent = `Fill boxes & tick your Leave status`;
         basicDisplay.textContent = ``
         leaveDisplay.textContent = ""
@@ -162,10 +174,11 @@ function calculate(){
         transDisplay.textContent = ``
         overtimeDisplay.textContent = ""
         housingDisplay.textContent = ""
+        upfrontDisplay.textContent = ""
        
-      
+
      }
     
- } 
-
  
+      
+ }
