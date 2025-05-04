@@ -1,6 +1,7 @@
 let radioYes = document.getElementById(`leaveradio1`);
 let radioNo = document.getElementById(`leaveradio2`);
 let basicInput = document.getElementById(`basicInput`).value;
+let housingDisplay = document.getElementById(`houseDisplay`);
 let newtransport;
 let diffIntransport;
 let oldTransport;
