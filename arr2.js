@@ -128,7 +128,7 @@ function calculate(){
     }
 
     function upfront(){
-        totalup = (newhousing * 12) + 240000;
+        totalup = (newhousing * 12) + 230000;
         totalup = parseInt(totalup);
         upfrontDisplay.textContent =  (`Your next Up-front: ₦${((totalup).toFixed(2,0))}`) ;
          
